@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#31544f">
+    <title>Little Haven | Nursery Furniture & Bundles</title>
+    <meta
+      name="description"
+      content="Shop Little Haven nursery cots, drawers, change tables, bassinets and curated room bundles available in Melbourne."
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      Melbourne collection & local delivery enquiries available <span aria-hidden="true">|</span>
+      Prices shown in AUD including GST
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Little Haven home">
+        <img class="brand-logo" src="./assets/brand/little-haven-logo-web.png" alt="Little Haven">
+        <span>
+          <strong>Little Haven</strong>
+          <small>Nursery furniture collection</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#bundles">Bundles</a>
+        <a href="#shop">Shop all</a>
+        <a href="#delivery">How to order</a>
+        <a href="#safety">Safety</a>
+      </nav>
+      <button class="cart-button" id="open-cart" type="button" aria-controls="cart-drawer">
+        Cart
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Nursery collection introduction">
+        <div class="hero-copy">
+          <p class="eyebrow">Limited Melbourne Nursery Collection</p>
+          <h1>Build the nursery in one beautiful order.</h1>
+          <p class="hero-text">
+            White timber cots, practical storage and matched nursery bundles,
+            selected for calm spaces and growing families.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#bundles">Shop room bundles</a>
+            <a class="button secondary" href="#shop">Browse all products</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>7</dt>
+              <dd>bundle offers</dd>
+            </div>
+            <div>
+              <dt>18</dt>
+              <dd>product lines</dd>
+            </div>
+            <div>
+              <dt>Melbourne</dt>
+              <dd>stock location</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-media">
+          <img
+            src="./assets/products/Royal cot+ change table.jpg"
+            alt="White nursery cot and matching change table in a styled room"
+          >
+          <div class="hero-offer">
+            <span>Bundle saving</span>
+            <strong>Save up to A$201</strong>
+            <small>on selected room sets</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" aria-label="Store benefits">
+        <article>
+          <h2>Styled room sets</h2>
+          <p>Pair your cot with drawer storage and a cot mattress in one purchase request.</p>
+        </article>
+        <article>
+          <h2>Local-first service</h2>
+          <p>Request Melbourne pickup or obtain a local delivery quote at checkout.</p>
+        </article>
+        <article>
+          <h2>Limited stock release</h2>
+          <p>Melbourne stock quantities are finite, so favourite styles may sell out.</p>
+        </article>
+      </section>
+
+      <section class="notice" id="safety" aria-label="Infant sleep product information">
+        <div>
+          <p class="eyebrow">Important product notice</p>
+          <h2>Sleep products are available by enquiry.</h2>
+        </div>
+        <p>
+          Cots, bassinets and mattresses will be supplied with applicable safety
+          information and product warnings confirmed before sale or dispatch.
+          Please request the information relevant to your selected item.
+        </p>
+      </section>
+
+      <section class="section bundles" id="bundles">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Save with a complete setup</p>
+            <h2>Nursery bundle deals</h2>
+          </div>
+          <p>Combine a cot, storage and mattress for a simpler nursery setup.</p>
+        </div>
+        <div class="bundle-grid" id="bundle-grid"></div>
+      </section>
+
+      <section class="section shop" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The collection</p>
+            <h2>Shop all products</h2>
+          </div>
+          <p>Prices include GST. Delivery is quoted after your order request.</p>
+        </div>
+        <form class="filters" id="filters" aria-label="Product filters">
+          <label class="search-field">
+            <span class="sr-only">Search products</span>
+            <input id="search" type="search" placeholder="Search cots, drawers, storage...">
+          </label>
+          <label>
+            <span class="sr-only">Filter category</span>
+            <select id="category">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label>
+            <span class="sr-only">Sort products</span>
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </form>
+        <p class="results" id="results-count" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="order-steps" id="delivery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Easy ordering</p>
+            <h2>How to reserve your furniture</h2>
+          </div>
+        </div>
+        <ol>
+          <li>
+            <strong>Choose your pieces</strong>
+            <span>Add individual items or a bundle offer to your cart.</span>
+          </li>
+          <li>
+            <strong>Send an enquiry</strong>
+            <span>Share your preferred pickup or delivery suburb and contact details.</span>
+          </li>
+          <li>
+            <strong>Confirm availability</strong>
+            <span>Stock, product information and delivery costs are confirmed before payment.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="faq section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Questions</p>
+            <h2>Helpful information</h2>
+          </div>
+        </div>
+        <div class="faq-grid">
+          <details>
+            <summary>Can I purchase pieces separately?</summary>
+            <p>Yes. All listed products can be requested individually while stock remains.</p>
+          </details>
+          <details>
+            <summary>Does a cot bundle include a mattress?</summary>
+            <p>Every nursery bundle listed on this page includes one cot mattress.</p>
+          </details>
+          <details>
+            <summary>Is delivery included in the price?</summary>
+            <p>No. Prices include GST, while Melbourne pickup or delivery arrangements are confirmed separately.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="brand footer-brand">
+        <img class="brand-logo" src="./assets/brand/little-haven-logo-web.png" alt="Little Haven">
+        <span>
+          <strong>Little Haven</strong>
+          <small>Nursery furniture collection</small>
+        </span>
+      </div>
+      <p>Limited stock nursery furniture available by order enquiry in Melbourne.</p>
+      <p class="fine-print">
+        Product availability, product information, delivery and payment terms are confirmed before sale.
+      </p>
+    </footer>
+
+    <div class="backdrop" id="cart-backdrop" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">Your selection</p>
+          <h2>Cart</h2>
+        </div>
+        <button class="icon-button" id="close-cart" type="button" aria-label="Close cart">&times;</button>
+      </div>
+      <div class="cart-lines" id="cart-lines"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal incl. GST</span>
+          <strong id="cart-total">A$0</strong>
+        </div>
+        <small>Delivery is quoted separately. Availability is confirmed before payment.</small>
+        <button class="button primary wide" id="start-checkout" type="button">Request to purchase</button>
+        <button class="link-button" id="continue-shopping" type="button">Continue shopping</button>
+      </div>
+    </aside>
+
+    <dialog class="product-dialog" id="product-dialog">
+      <button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Close details">&times;</button>
+      <div id="product-detail"></div>
+    </dialog>
+
+    <dialog class="checkout-dialog" id="checkout-dialog">
+      <button class="icon-button dialog-close" type="button" data-close-checkout aria-label="Close order request">&times;</button>
+      <div class="checkout-layout">
+        <div>
+          <p class="eyebrow">Reserve your order</p>
+          <h2>Purchase enquiry</h2>
+          <p>Enter your details and we will prepare a clear order summary for confirmation.</p>
+          <div class="checkout-order" id="checkout-order"></div>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+          <label>
+            Full name
+            <input name="name" required autocomplete="name">
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" required autocomplete="email">
+          </label>
+          <label>
+            Phone number
+            <input name="phone" type="tel" required autocomplete="tel">
+          </label>
+          <label>
+            Suburb / postcode
+            <input name="suburb" required autocomplete="postal-code">
+          </label>
+          <label>
+            Fulfilment preference
+            <select name="delivery">
+              <option>Request local delivery quote</option>
+              <option>Melbourne pickup enquiry</option>
+            </select>
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="3" placeholder="Preferred timeframe or product questions"></textarea>
+          </label>
+          <button class="button primary wide" type="submit">Prepare enquiry</button>
+          <div class="payment-divider"><span>or pay online</span></div>
+          <button class="button stripe wide" id="pay-stripe" type="button" disabled>
+            Secure Stripe checkout unavailable
+          </button>
+          <p class="payment-status" id="payment-status">
+            Secure payment is enabled after the store connects its Stripe sandbox account.
+          </p>
+          <p class="fine-print">
+            Delivery is confirmed separately. Sleep-product payments require confirmed safety information.
+          </p>
+        </form>
+      </div>
+      <section class="enquiry-result" id="enquiry-result" hidden>
+        <h3>Enquiry prepared</h3>
+        <p>Copy this summary to send through your preferred contact channel.</p>
+        <pre id="enquiry-text"></pre>
+        <button class="button secondary" id="copy-enquiry" type="button">Copy enquiry details</button>
+      </section>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

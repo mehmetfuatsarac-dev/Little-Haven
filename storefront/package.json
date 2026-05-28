@@ -1,0 +1,13 @@
+{
+  "name": "little-haven-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "check": "node --check app.js && node --check serve.mjs && node --check checkout-products.mjs && node --check stripe-server.mjs && node --check api/stripe-config.js && node --check api/create-checkout-session.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
